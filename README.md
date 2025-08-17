@@ -12,30 +12,46 @@ I have a collection of microcontrollers and sensors. I am working my way through
 ## What did I use?
 
 Here’s a picture of the components I used for this project:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/0b86b3d1-6eeb-4af2-a430-eb9047f0d228" />
-Here’s a closer look at the gesture sensor:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/6f3cb507-8f20-437e-9f62-3ffe7b0628ff" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/0b86b3d1-6eeb-4af2-a430-eb9047f0d228" />
+
+The project uses a microcontroller, a gesture sensor and a cable to connect the two. Here’s a closer look at the gesture sensor:
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/6f3cb507-8f20-437e-9f62-3ffe7b0628ff" />
+
 The front of the sensor has some basic information about its pinout. Here’s the back, which has the actual sensor:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/c985ecfc-2031-4aee-a0dd-2f8fd1bf1e1a" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/c985ecfc-2031-4aee-a0dd-2f8fd1bf1e1a" />
+
 ## What does it look like?
 
 This is what the project looks like when it’s running:
-<img width="1545" height="1000" alt="image" src="https://github.com/user-attachments/assets/c72e5d84-b429-405e-8710-6dde7509698c" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/c72e5d84-b429-405e-8710-6dde7509698c" />
+
 There are three sizes of eyes – small, medium and large (shown). The iris and pupil will follow input from the gesture sensor. The eyes have already moved to look a little to the right. There are a series of buttons, on the bottom of the microcontroller’s screen, that can be used to change the color of the eyes. Here are the large yellow eyes looking up:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/4b6b7ff9-1ec3-4929-a1b7-962fed813327" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/4b6b7ff9-1ec3-4929-a1b7-962fed813327" />
+
 Here are the small size eyes:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/98702609-d457-4459-8558-41db67cf68db" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/98702609-d457-4459-8558-41db67cf68db" />
+
 ## Technical Overview
 
 The microcontroller is 2 x 2 inches (~50 x 50mm) and has a screen resolution of 320 x 240. In the orientation I use, this becomes 240 x 320:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/86b0f4d9-b4ba-43f8-898d-cc264028d25c" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/86b0f4d9-b4ba-43f8-898d-cc264028d25c" />
+
 The eyes are just a black circle (pupil), drawn on top of a blue circle (iris), drawn on top of of a white circle (eyeball):
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/c24ce35d-ce3c-4451-b5ef-f8a999c77e82" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/c24ce35d-ce3c-4451-b5ef-f8a999c77e82" />
 
 A sprite is used to hold the entire eye as this helps to prevent screen flicker when updating the position of the iris and pupil. Only one sprite is used as the eyes are symmetrical e.g. they are both the same size and will look in the same direction. The sprite is displayed twice to make the pair of eyes.
 
 Coordinates within the sprite are relative to the sprite, on the full screen:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/82790f33-6448-4e94-9b5f-4fd24536cd48" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/82790f33-6448-4e94-9b5f-4fd24536cd48" />
 
 No matter where the sprite is on the screen, internal X and Y coordinates will always be 0..49.
 
@@ -44,7 +60,8 @@ The gesture sensor can track up, down, left, right, rotate clockwise, rotate ant
 The up, down, left and right gestures make the eyes look in that direction. The rotate gestures make the eyes roll in that direction. The forward and back gestures make the eyes larger or smaller.
 
 The rolling eyes effect is created by calculating a handful of points on an orbital circle, drawn at the center of the eyeball:
-<img width="1545" height="2000" alt="image" src="https://github.com/user-attachments/assets/12a6c494-6093-46c2-98db-f11dcb8b7515" />
+
+<img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/12a6c494-6093-46c2-98db-f11dcb8b7515" />
 
 Coordinates are calculated at 45 degree intervals around this orbit. This gives 6 X and Y coordinates that can be used to redraw the iris and pupil.
 
@@ -52,9 +69,13 @@ Coordinates are calculated at 45 degree intervals around this orbit. This gives 
 
 You will need:
 
-    1. The project uses a Core2 AWS (https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) microcontroller from M5Stack (https://m5stack.com/).
+    1. The project uses a Core2 AWS 
+	(https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) microcontroller from M5Stack (https://m5stack.com/).
        
-    2. M5Stack also had a gesture sensor (https://shop.m5stack.com/products/unit-gesture-recognition-sensor-paj7620u2?srsltid=AfmBOood8i7os-8pYig_AcWU4RKFewEWPErj7F52ppLfspHVCewNGR6y) which comes with the Grove cable. Technical information, and Arduino Sketch samples, for the sensor can be found here https://docs.m5stack.com/en/unit/gesture.
+    2. M5Stack also had a gesture sensor 
+	(https://shop.m5stack.com/products/unit-gesture-recognition-sensor-paj7620u2?srsltid=AfmBOood8i7os-8pYig_AcWU4RKFewEWPErj7F52ppLfspHVCewNGR6y) 
+ 	which comes with the Grove cable. Technical information, and Arduino Sketch 
+  	samples, for the sensor can be found here https://docs.m5stack.com/en/unit/gesture.
        
     3. The application only uses the standard M5Stack and Core2 libraries. 
        
@@ -62,7 +83,9 @@ You will need:
        
     5. A USB A to USB C cable to connect the PC or Mac to the Core2.
        
-    6. The git utility to access the GIT repository (git clone https://github.com/davygotgit/movingeyes.git) or visit https://github.com/davygotgit/movingeyes and download a ZIP file.
+    6. The git utility to access the GIT repository 
+	(git clone https://github.com/davygotgit/movingeyes.git) or visit 
+ 	https://github.com/davygotgit/movingeyes and download a ZIP file.
 
 M5Stack have a range of integrated microcontrollers and sensors. I like the Core2 AWS version as it a decent touchscreen, plenty of CPU and memory, and it has three Grove ports. 
 
@@ -105,16 +128,19 @@ There are a couple of options to build the application for the first time. Optio
     1. Start the Arduino IDE.
     2. Create a new project using the File -> New Sketch menu option.
     3. Save the project using the name movingeyes by using the File -> Save menu option.
-    4. Open the src/movingeyes.ino file, from repository, using another editor, and copy/paste the contents over the skeleton project.
+    4. Open the src/movingeyes.ino file, from repository, using another editor, 
+	and copy/paste the contents over the skeleton project.
        
 Option 2 is:
        
     1. Start the Arduino IDE.
     2. Create a new project using the File -> New Sketch menu option.
     3. Save the project using the name movingeyes by using the File -> Save menu option.
-    4. Use the Sketch -> Show Sketch Folder menu option to get the location of the project (Sketch location). This will be similar to Home/Arduino/movingeyes on Linux.
+    4. Use the Sketch -> Show Sketch Folder menu option to get the location of the 
+	project (Sketch location). This will be similar to Home/Arduino/movingeyes on Linux.
     5. Close the IDE.
-    6. Copy the movingeyes.ino file from the src subdirectory of the repository to the Sketch location.
+    6. Copy the movingeyes.ino file from the src subdirectory of the repository 
+	to the Sketch location.
     7. Start the Arduino IDE and load the movingeyes project.
        
 Once you have the initial project saved, you can just load it from File -> Open Recent menu option.
