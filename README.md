@@ -39,6 +39,8 @@ Here are the small size eyes:
 
 ## Technical Overview
 
+The project uses a Core2 AWS microcontroller (https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) microcontroller from M5Stack (https://m5stack.com/). M5Stack also had a gesture sensor (https://shop.m5stack.com/products/unit-gesture-recognition-sensor-paj7620u2?srsltid=AfmBOood8i7os-8pYig_AcWU4RKFewEWPErj7F52ppLfspHVCewNGR6y) which comes with the Grove cable. Technical information, and Arduino Sketch samples, for the sensor can be found here https://docs.m5stack.com/en/unit/gesture.
+       
 The microcontroller is 2 x 2 inches (~50 x 50mm) and has a screen resolution of 320 x 240. In the orientation I use, this becomes 240 x 320:
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/86b0f4d9-b4ba-43f8-898d-cc264028d25c" />
@@ -69,21 +71,15 @@ Coordinates are calculated at 45 degree intervals around this orbit. This gives 
 
 You will need:
 
-    1. The project uses a Core2 AWS 
-	(https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) microcontroller from M5Stack (https://m5stack.com/).
-       
-    2. M5Stack also had a gesture sensor 
-	(https://shop.m5stack.com/products/unit-gesture-recognition-sensor-paj7620u2?srsltid=AfmBOood8i7os-8pYig_AcWU4RKFewEWPErj7F52ppLfspHVCewNGR6y) 
- 	which comes with the Grove cable. Technical information, and Arduino Sketch 
-  	samples, for the sensor can be found here https://docs.m5stack.com/en/unit/gesture.
-       
-    3. The application only uses the standard M5Stack and Core2 libraries. 
-       
-    4. A PC with Windows, Linux, or a Mac to install the Arduino IDE which can be downloaded here https://www.arduino.cc/en/software/. 
-       
-    5. A USB A to USB C cable to connect the PC or Mac to the Core2.
-       
-    6. The git utility to access the GIT repository 
+1. An M5Stack Core2 AWS microcontroller and gesture sensor. The application only uses the standard
+   M5Stack and Core2 libraries. 
+
+2. A PC with Windows, Linux, or a Mac to install the Arduino IDE which can be downloaded
+   here https://www.arduino.cc/en/software/.
+
+3. A USB A to USB C cable to connect the PC or Mac to the Core2.
+
+4. The git utility to access the GIT repository 
 	(git clone https://github.com/davygotgit/movingeyes.git) or visit 
  	https://github.com/davygotgit/movingeyes and download a ZIP file.
 
@@ -125,23 +121,23 @@ You need to download the code from the GIT repository. This can be done by visit
 
 There are a couple of options to build the application for the first time. Option 1 is:
 
-    1. Start the Arduino IDE.
-    2. Create a new project using the File -> New Sketch menu option.
-    3. Save the project using the name movingeyes by using the File -> Save menu option.
-    4. Open the src/movingeyes.ino file, from repository, using another editor, 
+1. Start the Arduino IDE.
+2. Create a new project using the File -> New Sketch menu option.
+3. Save the project using the name movingeyes by using the File -> Save menu option.
+4. Open the src/movingeyes.ino file, from repository, using another editor, 
 	and copy/paste the contents over the skeleton project.
        
 Option 2 is:
        
-    1. Start the Arduino IDE.
-    2. Create a new project using the File -> New Sketch menu option.
-    3. Save the project using the name movingeyes by using the File -> Save menu option.
-    4. Use the Sketch -> Show Sketch Folder menu option to get the location of the 
+1. Start the Arduino IDE.
+2. Create a new project using the File -> New Sketch menu option.
+3. Save the project using the name movingeyes by using the File -> Save menu option.
+4. Use the Sketch -> Show Sketch Folder menu option to get the location of the 
 	project (Sketch location). This will be similar to Home/Arduino/movingeyes on Linux.
-    5. Close the IDE.
-    6. Copy the movingeyes.ino file from the src subdirectory of the repository 
+5. Close the IDE.
+6. Copy the movingeyes.ino file from the src subdirectory of the repository 
 	to the Sketch location.
-    7. Start the Arduino IDE and load the movingeyes project.
+7. Start the Arduino IDE and load the movingeyes project.
        
 Once you have the initial project saved, you can just load it from File -> Open Recent menu option.
 
