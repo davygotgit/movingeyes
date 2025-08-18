@@ -37,6 +37,11 @@ Here are the small size eyes:
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/98702609-d457-4459-8558-41db67cf68db" />
 
+Here's a short video showing the project working:
+
+[![short video](https://img.youtube.com/vi/DLDeIVW_zk4/0.jpg)](https://www.youtu.be.com/watch?v=DLDeIVW_zk4)
+
+
 ## Technical Overview
 
 The project uses a Core2 AWS microcontroller (https://shop.m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit) microcontroller from M5Stack (https://m5stack.com/). M5Stack also had a gesture sensor (https://shop.m5stack.com/products/unit-gesture-recognition-sensor-paj7620u2?srsltid=AfmBOood8i7os-8pYig_AcWU4RKFewEWPErj7F52ppLfspHVCewNGR6y) which comes with the Grove cable. Technical information, and Arduino Sketch samples, for the sensor can be found here https://docs.m5stack.com/en/unit/gesture.
