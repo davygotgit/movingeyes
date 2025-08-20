@@ -37,7 +37,9 @@ Here are the small size eyes:
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/98702609-d457-4459-8558-41db67cf68db" />
 
-Here's a [![short video](https://img.youtube.com/vi/DLDeIVW_zk4/0.jpg)](https://www.youtube.com/watch?v=DLDeIVW_zk4) showing the project working.
+Here's a video showing the project working:
+
+[![short video](https://img.youtube.com/vi/DLDeIVW_zk4/0.jpg)](https://www.youtube.com/watch?v=DLDeIVW_zk4)
 
 ## Technical Overview
 
